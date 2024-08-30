@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Lesson 1</title>
+	<style>
+		.tab {
+			background-color: pink;
+			border: 1px solid darkred;
+		}
+		.played {
+			background-color: greenyellow;
+		}
+	</style>
+</head>
+<body>
+	<h1>Lesson 1: your first melody &#127925;</h1>
+	<div class="kalimba-apha">
+		<span class="tab" data-sound="note6">
+			A
+		</span>
+		<span class="tab" data-sound="note6">
+			A
+		</span>
+		<span class="tab" data-sound="note8">
+			C&#x307;
+		</span>
+		<span class="tab" data-sound="note6">
+			A
+		</span>
+	</div>
+	<br>
+	<div class="kalimba-numerical">
+		<span class="tab" data-sound="note6">
+			6
+		</span>
+		<span class="tab" data-sound="note6">
+			6
+		</span>
+		<span class="tab" data-sound="note8">
+			1&#x307;
+		</span>
+		<span class="tab" data-sound="note6">
+			6
+		</span>
+	</div>
+	<br>
+	<br>
+	<p>Hint:</p>
+	<div class="kalimba-alpha">
+		<span class="tab" data-sound="note13">
+			B&#x307;
+		</span>
+		<span class="tab" data-sound="note12">
+			G&#x307;
+		</span>
+		<span class="tab" data-sound="note10">
+			E&#x307;
+		</span>
+		<span class="tab played" data-sound="note8">
+			C&#x307;
+		</span>
+		<span class="tab played" data-sound="note6">
+			A
+		</span>
+		<span class="tab" data-sound="note4">
+			F
+		</span>
+		<span class="tab" data-sound="note2">
+			D
+		</span>
+		<span class="tab" data-sound="note1">
+			C
+		</span>
+		<span class="tab" data-sound="note3">
+			E
+		</span>
+		<span class="tab" data-sound="note5">
+			G
+		</span>
+		<span class="tab" data-sound="note7">
+			B
+		</span>
+		<span class="tab" data-sound="note9">
+			D&#x307;
+		</span>
+		<span class="tab" data-sound="note11">
+			F&#x307;
+		</span>
+		<span class="tab" data-sound="note13">
+			A&#x307;
+		</span>
+	</div>
+	<br>
+	<div class="kalimba-numerical">
+		<span class="tab" data-sound="note13">
+			7&#x307;
+		</span>
+		<span class="tab" data-sound="note12">
+			5&#x307;
+		</span>
+		<span class="tab" data-sound="note10">
+			3&#x307;
+		</span>
+		<span class="tab played" data-sound="note8">
+			1&#x307;
+		</span>
+		<span class="tab played" data-sound="note6">
+			6
+		</span>
+		<span class="tab" data-sound="note4">
+			4
+		</span>
+		<span class="tab" data-sound="note2">
+			2
+		</span>
+		<span class="tab" data-sound="note1">
+			1
+		</span>
+		<span class="tab" data-sound="note3">
+			3
+		</span>
+		<span class="tab" data-sound="note5">
+			5
+		</span>
+		<span class="tab" data-sound="note7">
+			7
+		</span>
+		<span class="tab" data-sound="note9">
+			2&#x307;
+		</span>
+		<span class="tab" data-sound="note11">
+			4&#x307;
+		</span>
+		<span class="tab" data-sound="note13">
+			6&#x307;
+		</span>
+	</div>
+	<br>
+	<br>
+	<a href="lesson2.html">Go to Lesson 2</a>
+	<script>
+		const tabs = document.querySelectorAll('.tab');	
+		tabs.forEach(tab => {
+			tab.addEventListener('click', () => {
+				const sound = new Audio(`../sounds/${tab.dataset.sound}.wav`);
+				sound.play();
+			});
+		});
+	</script>
+</body>
+</html>
